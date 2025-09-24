@@ -6,7 +6,7 @@ public class LinearSearchRecursion {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 2, 4, 2, 5};
         int target = 2;
-
+        // Contains all the Indices of the duplicate values
         List<Integer> indices = new ArrayList<>();
         DuplicateSearch(arr, 0, target, indices);
 
