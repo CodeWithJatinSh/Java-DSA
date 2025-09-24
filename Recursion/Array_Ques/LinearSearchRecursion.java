@@ -1,18 +1,16 @@
 package Recursion.Array_Ques;
+import java.util.ArrayList;
+import java.util.List;
 
 public class LinearSearchRecursion {
     public static void main(String[] args) {
-        // Input array
-        int[] arr = {1, 2, 3, 4, 5};
+        int[] arr = {1, 2, 3, 2, 4, 2, 5};
+        int target = 2;
 
-        // Target element we want to search
-        int target = 4;
+        List<Integer> indices = new ArrayList<>();
+        DuplicateSearch(arr, 0, target, indices);
 
-        // Start the search from index 0
-        int result = Search(arr, 0, target);
-
-        // Print the result
-        System.out.println("Target Value: " + target + " is at index: " + result);
+        System.out.println("Target " + target + " found at indices: " + indices);
     }
 
     /**
@@ -35,6 +33,28 @@ public class LinearSearchRecursion {
 
         // Recursive Step: Check the next element
         return Search(arr, index + 1, target);
+    }
+
+    /**
+     * Recursive method to find all indices of a target element in an array.
+     * @param arr   The input array
+     * @param index Current index to check
+     * @param target The element we are searching for
+     * @param list  List to store all found indices
+     */
+    static void DuplicateSearch(int[] arr, int index, int target, List<Integer> list) {
+        // Base Case: If index reaches end of array, stop recursion
+        if (index == arr.length) {
+            return;
+        }
+
+        // If current element matches target, store its index
+        if (arr[index] == target) {
+            list.add(index);
+        }
+
+        // Recursive Step: Move to the next index
+        DuplicateSearch(arr, index + 1, target, list);
     }
 }
 
