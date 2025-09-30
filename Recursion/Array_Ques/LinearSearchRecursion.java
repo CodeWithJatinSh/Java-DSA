@@ -1,4 +1,3 @@
-package Recursion.Array_Ques;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,8 +8,9 @@ public class LinearSearchRecursion {
         // Contains all the Indices of the duplicate values
         List<Integer> indices = new ArrayList<>();
         DuplicateSearch(arr, 0, target, indices);
-
         System.out.println("Target " + target + " found at indices: " + indices);
+
+        System.out.println(DuplicateSearch2(arr,0,target));
     }
 
     /**
@@ -55,6 +55,25 @@ public class LinearSearchRecursion {
 
         // Recursive Step: Move to the next index
         DuplicateSearch(arr, index + 1, target, list);
+    }
+
+    static ArrayList<Integer> DuplicateSearch2(int[] arr, int index, int target) {
+        ArrayList<Integer> list = new ArrayList<>();
+        // Base Case: If index reaches end of array, stop recursion
+        if (index == arr.length) {
+            return list;
+        }
+
+        // If current element matches target, store its index
+        if (arr[index] == target) {
+            list.add(index);
+        }
+
+        // Recursive Step: Move to the next index
+       ArrayList<Integer> AnsFromBelowCalls =  DuplicateSearch2(arr, index + 1, target);
+        list.addAll(AnsFromBelowCalls);
+
+        return list;
     }
 }
 
