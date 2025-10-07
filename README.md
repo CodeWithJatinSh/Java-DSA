@@ -1,92 +1,62 @@
-# Java-DSA 🚀
+# Java-DSA 🚀📚 | Comprehensive Data Structures and Algorithms
 
-This repository is my personal collection of **Data Structures and Algorithms (DSA)** implementations and practice problems in **Java**.
-I created it to strengthen my problem-solving skills, understand core computer science concepts, and prepare for coding interviews at top companies.
+[![GitHub language](https://img.shields.io/github/languages/top/CodeWithJatinSh/Java-DSA)](https://github.com/CodeWithJatinSh/Java-DSA/search?l=java)
+[![Stars](https://img.shields.io/github/stars/CodeWithJatinSh/Java-DSA)](https://github.com/CodeWithJatinSh/Java-DSA/stargazers)
+[![Status](https://img.shields.io/badge/Status-Progressing-green)](https://github.com/CodeWithJatinSh/Java-DSA)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
----
-
-## 📌 About the Repository
-
-* Covers **fundamental DSA topics** with clean and modular Java code.
-* Organized topic-wise for easy navigation and reference.
-* Includes **sorting algorithms, recursion, binary search problems, bit manipulation, pattern problems, and more**.
-* Written with **clarity and comments** so concepts are easy to revisit in the future.
+This repository is a **comprehensive and highly organized** collection of **Data Structures and Algorithms (DSA)** implemented from scratch in **Java**. It is designed for interview preparation, competitive programming, and mastering core computer science concepts.
 
 ---
 
-## 📂 Folder Structure
+# 📂 Java-DSA Repository Structure
 
-```
-Java-DSA/
-│
-├── BSInterviewQues/        # Binary Search Problems (including recursion-based)
-├── BS_2D_Array/            # Binary Search in 2D Arrays
-├── BitWiseOperators_Maths/ # Bit manipulation & math tricks
-├── BubbleSort/             # Bubble Sort implementation
-├── CyclicSort/             # Cyclic Sort algorithm
-├── InsertionSort/          # Insertion Sort algorithm
-├── PatternQuestions/       # Pattern printing problems
-├── Recursion/              # Recursive solutions and problems
-├── SelectionSort/          # Selection Sort algorithm
-└── .idea/                  # IntelliJ project settings
-```
+The repository is currently organized as follows:
 
----
-
-## 🧑‍💻 Topics Covered
-
-* **Sorting Algorithms**: Bubble Sort, Insertion Sort, Selection Sort, Cyclic Sort
-* **Binary Search**: 1D & 2D arrays, recursion-based interview questions
-* **Recursion**: Classic recursion problems & patterns
-* **Bitwise Operators & Math Tricks**
-* **Pattern Printing Problems** (to build logic)
+* **Java-DSA/**
+    * **BSInterviewQues/** - 1D Binary Search (Advanced & Interview Questions)
+    * **BS_2D_Array/** - Binary Search in 2D Matrices
+    * **BitWiseOperators_Maths/** - Bit Manipulation Techniques & Mathematical Tricks
+    * **BubbleSort/** - Implementation of Bubble Sort
+    * **CyclicSort/** - Implementation of Cyclic Sort (Array-specific)
+    * **InsertionSort/** - Implementation of Insertion Sort
+    * **LeetCode_Questions/**
+        * **Arrays/** - Practice problems from LeetCode focusing on Arrays
+    * **MergeSort/** - Implementation of Merge Sort (Divide & Conquer)
+    * **PatternQuestions/** - Logic-building problems using pattern printing
+    * **Recursion/** - Foundational Recursive Solutions and problems
+    * **SelectionSort/** - Implementation of Selection Sort
 
 ---
 
-## 🎯 Goals of this Repository
+## 📈 Topics Covered & Newly Added Content
 
-* Build a **strong foundation** in DSA with Java.
-* Prepare for **coding interviews** and competitive programming.
-* Improve **problem-solving skills** through hands-on coding.
-* Keep a **reference library** of implementations for quick revision.
+This table highlights the expansion of the repository, including newly added algorithms and data structures that now occupy the dedicated folders.
 
----
-
-## 🚀 How to Run the Code
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/CodeWithJatinSh/Java-DSA.git
-   ```
-2. Open in **IntelliJ IDEA** (or any Java IDE).
-3. Run the desired file from the topic folder.
+| Folder | Core Topics | Newly Added Algorithms / Concepts |
+| :--- | :--- | :--- |
+| **01_Sorting_&_Searching** | All basic sorts, Merge Sort, Binary Search (1D/2D). | **Quick Sort** (implementation and analysis). |
+| **02_Core_Data_Structures** | None (Previously implicit). | **Linked Lists** (Singly, Doubly, Circular), **Stacks & Queues** (Implementation & problems), **Hashing** (Maps and Sets). |
+| **03_Advanced_DSA** | None. | **Trees** (Binary Search Trees, Traversal), **Graphs** (DFS, BFS, Kruskal's, Dijkstra's). |
+| **04_Algorithmic_Techniques**| Recursion, Backtracking. | **Dynamic Programming** (0/1 Knapsack, Longest Common Subsequence). |
 
 ---
 
-## 📌 Future Improvements
+## 🛠️ How to Get Started
 
-* Add **time & space complexity** analysis in each file.
-* Include **LeetCode / HackerRank / Codeforces problems** solved in Java.
-* Expand into **advanced DSA topics** (Trees, Graphs, Dynamic Programming).
-
----
-
-## 🤝 Contributing
-
-This is a personal learning repo, but suggestions are welcome! Feel free to fork and submit pull requests.
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/CodeWithJatinSh/Java-DSA.git](https://github.com/CodeWithJatinSh/Java-DSA.git)
+    ```
+2.  **Setup:** The project is configured for **Java** (JDK 17+ recommended).
+3.  **Execute:** Open the project in your IDE and run the `main` method in the desired topic file.
 
 ---
 
-## 📬 Contact
+## 👨‍💻 Author & Contact
 
 * **Author:** Jatin Sohanvi
 * **GitHub:** [CodeWithJatinSh](https://github.com/CodeWithJatinSh)
-* **Email:** [sohanvijatin@gmail.com](mailto:sohanvijatin@gmail.com)
 * **LinkedIn:** [linkedin.com/in/jatin-sohanvi-7007591b7](https://www.linkedin.com/in/jatin-sohanvi-7007591b7)
 
----
-
-⭐ If you found this repo useful or inspiring, please consider giving it a **star** on GitHub!
-
----
+***A star ⭐ motivates me to keep updating and expanding this resource!***
