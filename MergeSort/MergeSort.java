@@ -7,10 +7,12 @@ public class MergeSort {
 
         // Call mergesort function → returns a sorted array
         // NOTE: The original array will not be modified, because we use copyOfRange
-        int[] sortedArray = mergeSort(arr);
+        //int[] sortedArray = mergeSort(arr);
 
         // Print the sorted array
-        System.out.println(Arrays.toString(sortedArray));
+        //System.out.println(Arrays.toString(sortedArray));
+        InPlaceMergeSort(arr,0,arr.length-1);
+        System.out.println(Arrays.toString(arr));
     }
 
     // Recursive function that divides the array into smaller parts
@@ -69,6 +71,101 @@ public class MergeSort {
 
         return ans; // return merged sorted array
     }
+    // Recursive merge sort
+    public static void InPlaceMergeSort(int[] arr, int s, int e) {
+        // Base case: if there is only one element, return
+        if (e - s == 1) {
+            return;
+        }
+
+        int mid = (s + e) / 2;
+
+        // Recursively divide left half
+        InPlaceMergeSort(arr, s, mid);
+
+        // Recursively divide right half
+        InPlaceMergeSort(arr, mid, e);
+
+        // Merge the two halves
+        InPlaceMerge(arr, s, mid, e);
+    }
+
+    // Function to merge two sorted halves [s..mid) and [mid..e)
+    public static void InPlaceMerge(int[] arr, int s, int m, int e) {
+        int[] temp = new int[e - s];  // temp array to store merged result
+        int i = s;     // pointer for left half
+        int j = m;     // pointer for right half
+        int k = 0;     // pointer for temp array
+
+        // Merge until one half is exhausted
+        while (i < m && j < e) {
+            if (arr[i] <= arr[j]) {
+                temp[k] = arr[i];
+                i++;
+            } else {
+                temp[k] = arr[j];
+                j++;
+            }
+            k++;
+        }
+
+        // Copy remaining elements from left half (if any)
+        while (i < m) {
+            temp[k] = arr[i];
+            i++;
+            k++;
+        }
+
+        // Copy remaining elements from right half (if any)
+        while (j < e) {
+            temp[k] = arr[j];
+            j++;
+            k++;
+        }
+
+        // Copy sorted temp array back to original array
+        System.arraycopy(temp, 0, arr, s, temp.length);
+    }
+    /*
+===============================================
+🧠 MERGE SORT EXPLANATION + DRY RUN
+===============================================
+
+🔹 mergeSort(arr, s, e)
+- Recursively divides the array into halves until
+  each subarray has one element (base case).
+- Then merges them back in sorted order.
+
+Example:
+arr = [5, 3, 8, 4]
+s = 0, e = 4
+
+STEP 1:
+mid = (0+4)/2 = 2
+Divide into [5,3] and [8,4]
+
+STEP 2:
+Left half [5,3] -> mid = 1 -> divides into [5] and [3]
+Both have one element → merge → [3,5]
+
+STEP 3:
+Right half [8,4] -> mid = 3 -> divides into [8] and [4]
+Merge → [4,8]
+
+STEP 4:
+Merge [3,5] and [4,8]
+→ Compare and merge → [3,4,5,8]
+
+✅ Final sorted array = [3,4,5,8]
+
+===============================================
+🔹 Key Pointers:
+- Base condition ensures no over-recursion.
+- `System.arraycopy` correctly replaces sorted part.
+- Index logic uses [s, e) (end exclusive).
+- `mid = (s + e) / 2` ensures even splitting.
+===============================================
+*/
 }
 
 /*
@@ -110,3 +207,5 @@ Worst Case: O(n log n)
 
 Space Complexity: O(n) → because we create new arrays during merging.
 */
+
+
